@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>MOHAMED ELAMINE — Ingenieur Cybersecurite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=Syne+Mono&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>">
+</head>
+
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-id">AC_</span>
+    <ul class="nav-links">
+      <li><a href="#hero">Accueil</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#parcours">Parcours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-l">
+      <div class="hero-eyebrow">Disponible · But R&T Cybersécurité · IUT Villetaneuse</div>
+      <h1 class="hero-name">
+        <span class="invert" style="font-size:clamp(1.8rem,3.5vw,3.8rem);letter-spacing:-0.01em">Mohamed Elamine</span>
+        <span class="invert">Amine</span>
+        <span class="outline">Chahid</span>
+      </h1>
+      <p class="hero-sub">
+        Futur ingénieur en cybersécurité.<br>
+        Je construis des défenses, casse des systèmes<br>
+        (éthiquement), et documente chaque exploit.
+      </p>
+      <div class="hero-stat-row">
+        <div class="hstat">
+          <div class="n">3<sup style="font-size:0.9rem">/52</sup></div>
+          <div class="l">Rang Promo</div>
+        </div>
+        <div class="hstat">
+          <div class="n">6+</div>
+          <div class="l">Certifs</div>
+        </div>
+        <div class="hstat">
+          <div class="n">33p</div>
+          <div class="l">Audit Pentest</div>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-acid">Voir mes projets →</a>
+        <a href="#contact" class="btn-ghost">Contact</a>
+      </div>
+    </div>
+    <div class="hero-r">
+      <canvas id="net-canvas"></canvas>
+      <div class="hero-r-tag">live_network_topology.js</div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sec">
+    <div class="sec-inner">
+      <span class="sec-tag reveal">01 — whoami</span>
+      <h2 class="sec-h reveal">À <em>propos</em></h2>
+      <div class="about-grid reveal">
+        <div class="about-body">
+          <p>Je suis <strong>Mohamed Elamine Amine Chahid</strong> — étudiant en 2ème année de BUT Réseaux &
+            Télécommunications, parcours Cybersécurité, classé <strong>3ème sur 52</strong>. Je démarre un stage SSI
+            supervisé directement par le RSSI d'une collectivité territoriale.</p>
+          <p>La sécurité n'est pas juste un cours pour moi : je pratique les <strong>CTF sur Root-Me et
+              TryHackMe</strong>, j'explore l'OSINT et le pentest de manière autonome. Mon audit grey-box a donné
+            lieu à un rapport de <strong>33 pages</strong> avec compromission complète du système cible.</p>
+          <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(200,255,0,0.15)">
+            <div
+              style="font-family:var(--mono);font-size:0.65rem;color:var(--acid);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.8rem">
+              Centres d'intérêt</div>
+            <p style="font-size:0.9rem;line-height:1.7;color:#9a9a8a">🎮 Jeux vidéo &nbsp;·&nbsp; ⚽ Football
+              &nbsp;·&nbsp; 🥾 Randonnée &nbsp;·&nbsp; 📚 Romans fantastiques &nbsp;·&nbsp; 🎬 Cinéma</p>
+          </div>
+        </div>
+        <div>
+          <div class="cert-list">
+            <div class="cert-item"><span class="dot"></span>Blue Team Labs One — BTL1</div>
+            <div class="cert-item"><span class="dot"></span>ISC² Certified in Cybersecurity (CC)</div>
+            <div class="cert-item"><span class="dot"></span>Fortinet NSE 1 & NSE 2</div>
+            <div class="cert-item"><span class="dot"></span>Google Cybersecurity Certificate</div>
+            <div class="cert-item"><span class="dot"></span>IBM Cybersecurity Fundamentals</div>
+            <div class="cert-item"><span class="dot"></span>Cybrary SOC Analyst</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS — HYBRID: TOPOLOGY + CARDS DÉTAILLÉES -->
+  <section id="skills" class="sec" style="padding-bottom:3rem;background:var(--ink);overflow:hidden">
+    <div class="sec-inner">
+      <span class="sec-tag reveal">02 — compétences</span>
+      <h2 class="sec-h reveal">Ce que je<br><em>sais faire</em></h2>
+
+      <!-- TOPOLOGY MAP -->
+      <p class="reveal"
+        style="font-family:var(--mono);font-size:0.72rem;color:var(--dim);margin-bottom:1.5rem;margin-top:-1.5rem">↗
+        Cliquez sur un nœud pour explorer les liens</p>
+      <div style="position:relative;width:100%;height:480px;margin-bottom:1rem" class="reveal">
+        <svg id="topo-svg" viewBox="0 0 1100 480" preserveAspectRatio="xMidYMid meet"
+          style="position:absolute;inset:0;width:100%;height:100%"></svg>
+      </div>
+      <div class="skill-detail" id="skill-detail">Sélectionnez un nœud dans la carte.</div>
+
+      <!-- CARTES COMPÉTENCES DÉTAILLÉES -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.2rem;margin-top:3rem">
+
+        <!-- RED TEAM -->
+        <div class="comp-card">
+          <div class="comp-top" style="border-left:3px solid #ff2d55">
+            <div class="comp-cat">Sécurité Offensive — Red Team</div>
+            <div class="comp-title">Attaquer</div>
+          </div>
+          <ul class="comp-list">
+            <li>Pentest boîte grise / noire (PTES, OWASP Top 10)</li>
+            <li>Nmap · Nessus · OpenVAS · Burp Suite · Metasploit</li>
+            <li>Hydra · SQLmap · John the Ripper</li>
+            <li>OSINT · CTF (TryHackMe / Root-Me)</li>
+          </ul>
+          <div class="comp-logos">
+            <span class="clogo" title="Metasploit"
+              style="background:rgba(255,45,85,.1);border-color:rgba(255,45,85,.3)">
+              <img src="https://www.metasploit.com/includes/images/metasploit-r7-logo.svg" alt="MSF"
+                onerror="this.outerHTML='<span>⚡</span>'" /> MSF
+            </span>
+            <span class="clogo" title="Burp Suite"
+              style="background:rgba(255,45,85,.1);border-color:rgba(255,45,85,.3)">
+              <img src="https://www.svgrepo.com/show/354349/burp-suite.svg" alt="Burp"
+                onerror="this.outerHTML='<span>🔴</span>'" /> Burp
+            </span>
+            <span class="clogo" title="Nmap" style="background:rgba(255,45,85,.1);border-color:rgba(255,45,85,.3)">🗺
+              Nmap</span>
+            <span class="clogo" title="Nessus" style="background:rgba(255,45,85,.1);border-color:rgba(255,45,85,.3)">🔍
+              Nessus</span>
+            <span class="clogo" title="Kali Linux"
+              style="background:rgba(255,45,85,.1);border-color:rgba(255,45,85,.3)">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Kali_Linux_2.0_wordmark.svg" alt="Kali"
+                style="height:14px;filter:invert(1)" onerror="this.outerHTML='🐉'" /> Kali
+            </span>
+          </div>
+        </div>
+
+        <!-- BLUE TEAM -->
+        <div class="comp-card">
+          <div class="comp-top" style="border-left:3px solid #0a84ff">
+            <div class="comp-cat">Blue Team &amp; SOC</div>
+            <div class="comp-title">Défendre</div>
+          </div>
+          <ul class="comp-list">
+            <li>IDS · IPS · EDR · SIEM · Threat Hunting</li>
+            <li>Réponse aux incidents (IR/DFIR) · Forensics</li>
+            <li>HoneyPot · Logs &amp; alertes</li>
+            <li>Wireshark · TCPdump · analyse PCAP</li>
+          </ul>
+          <div class="comp-logos">
+            <span class="clogo" style="background:rgba(10,132,255,.1);border-color:rgba(10,132,255,.3)">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Wireshark_Icon.png" alt="Wireshark"
+                onerror="this.outerHTML='🦈'" /> Wireshark
+            </span>
+            <span class="clogo" style="background:rgba(10,132,255,.1);border-color:rgba(10,132,255,.3)">🚨
+              Suricata</span>
+            <span class="clogo" style="background:rgba(10,132,255,.1);border-color:rgba(10,132,255,.3)">🔍 Snort</span>
+            <span class="clogo" style="background:rgba(10,132,255,.1);border-color:rgba(10,132,255,.3)">📊 SIEM</span>
+          </div>
+        </div>
+
+        <!-- GRC -->
+        <div class="comp-card">
+          <div class="comp-top" style="border-left:3px solid var(--acid)">
+            <div class="comp-cat">GRC &amp; Conformité</div>
+            <div class="comp-title">Gouverner</div>
+          </div>
+          <ul class="comp-list">
+            <li>EBIOS RM · ISO 27001 · ISO 27005</li>
+            <li>Analyse de risques DICP · Matrice de criticité</li>
+            <li>RGPD · NIS2 · DORA · PSSI</li>
+            <li>Audit &amp; plan de remédiation</li>
+          </ul>
+          <div class="comp-logos">
+            <span class="clogo" style="background:rgba(200,255,0,.08);border-color:rgba(200,255,0,.25)">📋 EBIOS
+              RM</span>
+            <span class="clogo" style="background:rgba(200,255,0,.08);border-color:rgba(200,255,0,.25)">🛡 ISO
+              27001</span>
+            <span class="clogo" style="background:rgba(200,255,0,.08);border-color:rgba(200,255,0,.25)">⚖ RGPD</span>
+            <span class="clogo" style="background:rgba(200,255,0,.08);border-color:rgba(200,255,0,.25)">🔒 NIS2</span>
+          </div>
+        </div>
+
+        <!-- RÉSEAUX -->
+        <div class="comp-card">
+          <div class="comp-top" style="border-left:3px solid #bf5fff">
+            <div class="comp-cat">Réseaux &amp; Systèmes</div>
+            <div class="comp-title">Connecter</div>
+          </div>
+          <ul class="comp-list">
+            <li>VLAN · VPN · DMZ · Firewall · pfSense · ACL</li>
+            <li>OSPF / BGP / MPLS · RIP · EIGRP · MP-BGP</li>
+            <li>DNS · DHCP · FTP · VRF · Samba · NFS</li>
+            <li>Cisco (commutateurs, routeurs)</li>
+          </ul>
+          <div class="comp-logos">
+            <span class="clogo" style="background:rgba(191,95,255,.1);border-color:rgba(191,95,255,.3)">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco"
+                style="height:14px" onerror="this.outerHTML='🔌'" /> Cisco
+            </span>
+            <span class="clogo" style="background:rgba(191,95,255,.1);border-color:rgba(191,95,255,.3)">🔥
+              pfSense</span>
+            <span class="clogo" style="background:rgba(191,95,255,.1);border-color:rgba(191,95,255,.3)">🌐
+              VLAN/STP</span>
+            <span class="clogo" style="background:rgba(191,95,255,.1);border-color:rgba(191,95,255,.3)">📡
+              OSPF/BGP</span>
+          </div>
+        </div>
+
+        <!-- SYSTÈMES -->
+        <div class="comp-card">
+          <div class="comp-top" style="border-left:3px solid #f0ece3">
+            <div class="comp-cat">Administration Système</div>
+            <div class="comp-title">Administrer</div>
+          </div>
+          <ul class="comp-list">
+            <li>Linux Debian / Kali · Windows Server / AD</li>
+            <li>Virtualisation VMware / VirtualBox · Arduino</li>
+            <li>MySQL · MariaDB · LDAP · Apache · GLPI</li>
+            <li>Services : Samba, NFS, partage fichiers</li>
+          </ul>
+          <div class="comp-logos">
+            <span class="clogo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="Linux"
+                style="height:18px;width:auto" onerror="this.outerHTML='🐧'" /> Linux
+            </span>
+            <span class="clogo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/88px-Windows_logo_-_2012.svg.png"
+                alt="Windows" style="height:16px;width:auto" onerror="this.outerHTML='🪟'" /> Win Server
+            </span>
+            <span class="clogo">🗄 MySQL</span>
+            <span class="clogo">📦 GLPI</span>
+            <span class="clogo">🤖 Arduino</span>
+          </div>
+        </div>
+
+        <!-- DEV / SCRIPTING -->
+        <div class="comp-card">
+          <div class="comp-top" style="border-left:3px solid var(--acid)">
+            <div class="comp-cat">Scripting &amp; Développement</div>
+            <div class="comp-title">Créer</div>
+          </div>
+          <ul class="comp-list">
+            <li>Python · Bash · PowerShell · API REST · Flask</li>
+            <li>HTML5 · CSS3 · PHP · JavaScript</li>
+            <li>Git · GitHub · cron · SSH · rsync</li>
+            <li>TCP/IP · IPv4/IPv6 · LAN/WLAN</li>
+          </ul>
+          <div class="comp-logos">
+            <span class="clogo" style="background:rgba(200,255,0,.08);border-color:rgba(200,255,0,.25)">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/512px-Python-logo-notext.svg.png"
+                alt="Python" style="height:18px;width:auto" onerror="this.outerHTML='🐍'" /> Python
+            </span>
+            <span class="clogo" style="background:rgba(200,255,0,.08);border-color:rgba(200,255,0,.25)">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png"
+                alt="HTML5" style="height:18px;width:auto" onerror="this.outerHTML='📄'" /> HTML5
+            </span>
+            <span class="clogo" style="background:rgba(200,255,0,.08);border-color:rgba(200,255,0,.25)">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JS"
+                style="height:18px;width:18px" onerror="this.outerHTML='🟨'" /> JS
+            </span>
+            <span class="clogo" style="background:rgba(200,255,0,.08);border-color:rgba(200,255,0,.25)">⚙ Bash</span>
+            <span class="clogo" style="background:rgba(200,255,0,.08);border-color:rgba(200,255,0,.25)">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" alt="Git"
+                style="height:16px;width:auto" onerror="this.outerHTML='🔀'" /> Git
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="sec">
+    <div class="sec-inner">
+      <span class="sec-tag reveal">03 — projets_SAE</span>
+      <h2 class="sec-h reveal">Ce que<br>j'ai <em>construit</em></h2>
+      <div class="proj-grid reveal">
+
+        <!-- FEATURED -->
+        <div class="proj-card featured">
+          <div class="proj-num">SAE 3.04 · Pentest</div>
+          <div class="proj-title">Audit Grey-Box<br>— Compromission Totale</div>
+          <div class="proj-desc">Test d'intrusion grey-box conduit en duo. Nmap → Nessus → Metasploit.
+            Identification des CVE, exploitation des vulnérabilités, élévation de privilèges, persistence. Rapport
+            d'audit complet de 33 pages avec recommandations priorisées par criticité.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Nmap</span><span class="proj-tag">Nessus</span><span
+              class="proj-tag">Metasploit</span><span class="proj-tag">CVE Analysis</span><span class="proj-tag">Rapport
+              33p</span>
+          </div>
+          <div class="proj-result">↳ Résultat : accès root + persistance — système intégralement compromis</div>
+          <a href="https://drive.google.com/drive/folders/1UEnw8GQ3eQhEYMG-lklD8g68oJj9WrDt?usp=drive_link"
+            target="_blank" rel="noopener" class="proj-link">Voir le rapport →</a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-num">R409-CYB · Sécurité LAN</div>
+          <div class="proj-title">pfSense + Suricata IDS</div>
+          <div class="proj-desc">Architecture VLAN ADMIN/USERS/SERVERS, règles deny-all/permit-by-exception, Suricata
+            avec Emerging Threats rules, analyse de logs et détection d'intrusions actives.</div>
+          <div class="proj-tags"><span class="proj-tag">pfSense</span><span class="proj-tag">Suricata</span><span
+              class="proj-tag">IDS/IPS</span><span class="proj-tag">VLAN</span></div>
+          <a href="https://drive.google.com/file/d/1PUMOodB8cp7tFYehE1r9FO-kUoaKaKOf/view?usp=drive_link"
+            target="_blank" rel="noopener" class="proj-link">Voir le rapport →</a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-num">SAE 3.03 · Infrastructure</div>
+          <div class="proj-title">JurisNova Network Redesign</div>
+          <div class="proj-desc">Refonte SI d'entreprise : segmentation VLAN, pfSense, GLPI, STP redondant. Sécurité
+            périmétrique end-to-end sur une topologie multi-sites.</div>
+          <div class="proj-tags"><span class="proj-tag">VLAN</span><span class="proj-tag">pfSense</span><span
+              class="proj-tag">GLPI</span><span class="proj-tag">STP</span></div>
+          <a href="https://drive.google.com/file/d/1IIhjLwrhf0Kj26UcfLF1GT8ULkYUnbX3/view?usp=drive_link"
+            target="_blank" rel="noopener" class="proj-link">Voir le rapport →</a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-num">SAE 3.02 · Dev · Chef d'équipe</div>
+          <div class="proj-title">Tirelire Connectée</div>
+          <div class="proj-desc">Lead d'une équipe de 5. App client-serveur Python/Flask, SQLite, TCP/UDP, auth
+            multi-profils. Méthode Agile, Trello, GitHub. Livraison anticipée avec modules bonus.</div>
+          <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Flask</span><span
+              class="proj-tag">TCP/UDP</span><span class="proj-tag">SQLite</span></div>
+          <a href="https://drive.google.com/drive/folders/1r8KOT-db5L6D8kfAbbedQQg6sn7gT_JN?usp=drive_link"
+            target="_blank" rel="noopener" class="proj-link">Voir le projet →</a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-num">R410 · Cryptographie</div>
+          <div class="proj-title">Cryptanalyse RSA & Affine</div>
+          <div class="proj-desc">Attaques par fréquence, RSA (génération clés, chiffrement vérifié), chiffres affines
+            (a=26, b=12), analyse Man-in-the-Middle, introduction à l'algo de Shor.</div>
+          <div class="proj-tags"><span class="proj-tag">RSA</span><span class="proj-tag">MitM</span><span
+              class="proj-tag">Shor</span><span class="proj-tag">Cryptanalyse</span></div>
+          <a href="https://drive.google.com/drive/folders/1PsEQU6ICsJQnGDM7DbP4Je7FyIy2z9xB?usp=drive_link"
+            target="_blank" rel="noopener" class="proj-link">Voir le projet →</a>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-num">R405 · Automatisation</div>
+          <div class="proj-title">Scripting Bash & Python</div>
+          <div class="proj-desc">6 TPs complets : UNIX avancé, scripting Bash, gestion de processus, Python, cron,
+            SSH/rsync. Automatisation de tâches système et déploiement.</div>
+          <div class="proj-tags"><span class="proj-tag">Bash</span><span class="proj-tag">Python</span><span
+              class="proj-tag">cron</span><span class="proj-tag">SSH</span><span class="proj-tag">rsync</span></div>
+          <a href="https://drive.google.com/drive/folders/18XUTj2ZMgenFMd6Try_NQWThDe9lJKut?usp=sharing" target="_blank"
+            rel="noopener" class="proj-link">Voir le projet →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
+  <section id="parcours" class="sec">
+    <div class="sec-inner">
+      <span class="sec-tag reveal">04 — timeline</span>
+      <h2 class="sec-h reveal">Par<em>cours</em></h2>
+      <div class="timeline reveal">
+        <div class="tl-item">
+          <div class="tl-date">Avril 2026 — En cours</div>
+          <div class="tl-role">Stage SSI</div>
+          <div class="tl-where">Collectivité territoriale (Mairie) · Supervisé par le RSSI</div>
+          <div class="tl-body">Sécurité des systèmes d'information en conditions réelles. Audit, gestion des risques,
+            sécurisation d'infrastructure, travail direct avec le RSSI.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2024 — 2026</div>
+          <div class="tl-role">BUT R&T — Parcours Cybersécurité</div>
+          <div class="tl-where">IUT de Villetaneuse · Université Sorbonne Paris Nord · Rang 3/52</div>
+          <div class="tl-body">Administration réseau, sécurité SI, cryptographie, réseaux cellulaires, transmission
+            avancée (OFDM/QAM), automatisation système. Classé 3ème sur 52.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2021 — 2024</div>
+          <div class="tl-role">Baccalauréat Général — Mention Bien</div>
+          <div class="tl-where">Spécialités Maths · Physique-Chimie</div>
+          <div class="tl-body">Bases analytiques appliquées aujourd'hui à la cryptographie et aux télécommunications.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="sec">
+    <div class="sec-inner">
+      <span class="sec-tag">05 — contact.sh</span>
+      <h2 class="sec-h">Travail<br>lons <em>ensemble</em></h2>
+      <div class="contact-grid">
+        <div>
+          <a class="contact-line" href="mailto:aminechahid.mohamedelamine@gmail.com">
+            <span class="label">Email</span>
+            aminechahid.mohamedelamine@gmail.com
+          </a>
+          <div class="contact-line" style="cursor:default">
+            <span class="label">Lieu</span>
+            Aubervilliers, Île-de-France
+          </div>
+          <a class="contact-line" href="https://github.com/Amine-creator13" target="_blank" rel="noopener">
+            <span class="label">GitHub</span>
+            github.com/Amine-creator13 ↗
+          </a>
+          <a class="contact-line" href="https://tryhackme.com/p/aminechahid.mohamedelamine" target="_blank"
+            rel="noopener">
+            <span class="label">TryHackMe</span>
+            tryhackme.com/p/aminechahid ↗
+          </a>
+          <a class="contact-line" href="https://root-me.pro/profiles" target="_blank" rel="noopener">
+            <span class="label">Root-Me</span>
+            root-me.pro/profiles ↗
+          </a>
+          <!-- CV cliquable -->
+          <a class="contact-line"
+            href="https://drive.google.com/file/d/1DMeefiai4oF9TukWPFYwRR9_euCwa-54/view?usp=sharing" target="_blank"
+            rel="noopener" style="margin-top:.5rem;align-items:center;gap:1rem">
+            <span class="label">CV</span>
+            <span style="display:flex;align-items:center;gap:.5rem">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                style="flex-shrink:0">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+              Télécharger mon CV ↗
+            </span>
+          </a>
+        </div>
+        <div class="avail-box">
+          <span class="avail-title">// statut_actuel</span>
+          <div class="avail-big">Open to<br>Work</div>
+          <div class="avail-sub">Recherche un contrat d'apprentissage ingénieur (Informatique & Réseaux / Cybersécurité)
+            à partir de sept. 2026. Motivé, rang 3/52, certifié BTL1 & ISC² CC.</div>
+
+          <!-- Formulaire mailto -->
+          <div style="margin-bottom:1.5rem">
+            <div
+              style="font-family:var(--mono);font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;opacity:.5;margin-bottom:.8rem">
+              Envoyer un message direct</div>
+            <input type="email" id="contact-email" placeholder="Votre email"
+              style="width:100%;background:rgba(0,0,0,.3);border:1px solid rgba(200,255,0,.25);color:var(--paper);font-family:var(--mono);font-size:.75rem;padding:.6rem .8rem;margin-bottom:.5rem;outline:none" />
+            <input type="text" id="contact-subject" placeholder="Sujet"
+              style="width:100%;background:rgba(0,0,0,.3);border:1px solid rgba(200,255,0,.25);color:var(--paper);font-family:var(--mono);font-size:.75rem;padding:.6rem .8rem;margin-bottom:.5rem;outline:none" />
+            <textarea id="contact-msg" rows="3" placeholder="Votre message..."
+              style="width:100%;background:rgba(0,0,0,.3);border:1px solid rgba(200,255,0,.25);color:var(--paper);font-family:var(--mono);font-size:.75rem;padding:.6rem .8rem;resize:none;outline:none"></textarea>
+            <button onclick="sendMail()" class="btn-acid"
+              style="margin-top:.6rem;width:100%;text-align:center;cursor:pointer;border:none">Envoyer →</button>
+          </div>
+
+          <p
+            style="font-family:var(--mono);font-size:.58rem;opacity:.45;line-height:1.6;border-top:1px solid rgba(0,0,0,.15);padding-top:.8rem">
+            Vos données ne sont pas stockées. Ce formulaire ouvre votre client mail. Aucune information personnelle
+            n'est conservée par ce site (RGPD).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Mohamed Elamine Amine Chahid</span>
+    <span>BUT R&T · Cybersécurité · IUT Villetaneuse</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
